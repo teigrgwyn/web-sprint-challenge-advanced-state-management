@@ -105,8 +105,8 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 
   After finishing your required elements, you can push your work further. These goals may or may not be things you have learned in this module but they build on the material you just studied. Time allowing, stretch your limits and see if you can deliver on the following optional goals:
 
-* [x] Build a smurf profile page with using react-router and dynamic url params  
-* [x] Using React Testing Library, test one or more of your components (not any component that fetches data though)
+* [ ] Build a smurf profile page with using react-router and dynamic url params  
+* [ ] Using React Testing Library, test one or more of your components (not any component that fetches data though)
 
 ### Reference Materials
 
@@ -130,7 +130,7 @@ In this challenge, you are to build a Smurfs village database utilizing Redux as
 ```
 
 
-- [ ] Double check to make sure that a smurf is created correctly once your functionality is built out. Initially Poppa and Smurfette will be in the array.
+- [x] Double check to make sure that a smurf is created correctly once your functionality is built out. Initially Poppa and Smurfette will be in the array.
 
 **HINT** if you are going to be working on Stretch Problem, you'll need to use that unique `id`.
 
