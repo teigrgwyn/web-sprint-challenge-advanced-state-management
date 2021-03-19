@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-export const FETCH_SMURFS_START = 'FETCH_SMURFS_START';
+export const FETCH_SMURFS_LOADING = 'FETCH_SMURFS_LOADING';
 export const FETCH_SMURFS_SUCCESS = 'FETCH_SMURFS_SUCCESS';
 export const FETCH_SMURFS_FAILURE = 'FETCH_SMURFS_FAILURE';
 export const ADD_SMURF = 'ADD_SMURF';
 export const SET_ERROR = 'SET_ERROR';
 
 export const fetchSmurfs = () => dispatch => {
-	dispatch({ type: FETCH_SMURFS_START });
+	dispatch({ type: FETCH_SMURFS_LOADING });
 	axios.get('http://localhost:3333/smurfs')
 		.then(res => {
 			console.log(res);
