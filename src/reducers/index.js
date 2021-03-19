@@ -1,7 +1,9 @@
 import { FETCH_SMURFS_LOADING, FETCH_SMURFS_SUCCESS, FETCH_SMURFS_FAILURE, ADD_SMURF, SET_ERROR } from '../actions';
 
 export const initialState = {
-
+	smurfs: [],
+	isLoading: false,
+	error: ''
 }
 
 const reducer = (state = initialState, action) =>{

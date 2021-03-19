@@ -1,5 +1,13 @@
 import React, { Component } from "react";
 
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducer from './reducers';
+import thunk from 'redux-thunk';
+import logger from 'redux-logger';
+
+import { fetchSmurfs } from './actions';
+
 import AddForm from './components/AddForm';
 import SmurfList from './components/SmurfList';
 import Header from './components/Header';
@@ -8,18 +16,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "./App.css";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <Header />
+	componentDidMount() {
+		fetchSmurfs();
+	}
 
-        <main>
-          <SmurfList/>
-          <AddForm/>
-        </main>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<Provider store={createStore(reducer, applyMiddleware(thunk, logger))}>
+
+			<div className="App">
+				<Header />
+
+				<main>
+					<SmurfList/>
+					<AddForm/>
+				</main>
+			</div>
+
+			</Provider>
+		);
+	}
 }
 
 export default App;
